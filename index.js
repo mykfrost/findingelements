@@ -23,3 +23,7 @@
  console.log('Index Is ',course2);
 
  //Arrow Functions
+
+ const course3 = courses.find(course3 => course3.name === 'HTML For Dummies');
+
+ console.log('Arrow Index Is ',course3);
