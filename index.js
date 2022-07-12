@@ -170,14 +170,38 @@ courses.sort(function(a,b){
 // a < b => -1
 // a > b => 1
 // a == b => 0
-if (a.name < name.b ) {
-   return -1;
-}
-if (a.name > b.name) {
-   return 1;
-}
-return 0;
 
+//to cheat the ascii table we hve to convert all values to upppercase
+
+nameA = a.name.toUpperCase();
+nameB = b.name.toUpperCase();
+
+if (nameA < nameB)return -1;
+if (nameA > nameB) return 1;
+return 0;
 });
 
-console.log(courses);
+console.log('JS Comes First',courses);
+
+//testing Arrays
+
+//we want to test if the numbers in the array are positive
+//Every() method checks to see if every element in our array meets our condition
+const testNumbers = [1,2,3];
+
+const allPositive = testNumbers.every(function(value ){
+   return value >= 0;
+});
+
+console.log('All Positive',allPositive);
+
+//using some method to see if atleast one is positive
+//Some() method checks to see if we have atleast one element in our array matches the condition/criteria
+
+const testNumbers2 = [1,-1,2,3];
+
+const atleastOnePositive = testNumbers2.some(function(value ){
+   return value >= 0;
+});
+
+console.log('Atleast One Positive',atleastOnePositive);
