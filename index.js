@@ -130,3 +130,54 @@ numbers.forEach(number => console.log('Fat Arrow',number));
 
 numbers.forEach((number,index) => console.log('Fat Arrow With Index',index,number));
 
+//Joining Arrays
+
+const numberz = [1,2,3];
+
+const joined = numbers.join(',');
+console.log(joined);
+
+//nother way to join messsages
+
+const message = 'This is my message';
+
+const parts = message.split(' ');//splitting the array with ''
+console.log(parts);
+
+parts.join('');
+
+const combined3 = parts.join('-');
+console.log(combined3);// this is useful when building a URL slug
+
+//Sorting Arrays
+
+const unsortedNumbers = [2 ,3,1];
+
+unsortedNumbers.sort();
+console.log('Sorted Solution',unsortedNumbers);
+
+//reversing the order in an array
+
+unsortedNumbers.reverse(console.log('Reverse',unsortedNumbers));
+//Another example with object
+
+const courses = [
+{id:1 , name : 'Node.js'},
+{id:2 , name: 'Javascript For Dummies'}
+];
+
+courses.sort(function(a,b){
+// a < b => -1
+// a > b => 1
+// a == b => 0
+if (a.name < name.b ) {
+   return -1;
+}
+if (a.name > b.name) {
+   return 1;
+}
+return 0;
+
+});
+
+console.log(courses);
