@@ -205,3 +205,26 @@ const atleastOnePositive = testNumbers2.some(function(value ){
 });
 
 console.log('Atleast One Positive',atleastOnePositive);
+
+//filtering an array based on a search criteria
+
+//we only want to return the positive numbers
+
+const filterNumber = [1, -1, 2, 3, 4];
+
+const filtered = filterNumber.filter(value =>  value >= 0);
+
+console.log('Filtered',filtered);
+
+//mapping arrays into strings
+const filterNumber2 = [1, -1, 2, 3, 4];
+
+const filtered2 = filterNumber2.filter(value2 =>  value2 >= 0);
+
+
+const items = filtered2.map(value2 => '<li>' + value2 +'</li>' );
+//using join methods to join
+
+const html = '<ul>'+ items.join('') + '</ul>';// we use these quotes to remove the comma that is used to separate the list of items in an array
+
+console.log('Second Filter For Mapping',html);
