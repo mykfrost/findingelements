@@ -231,17 +231,38 @@
 
 // //Mapping arrays into objects
 
-const numbers = [1, -1, 2, 3, 4];
+const numbers1 = [1, -1, 2, 3, 4];
 //const filtered = numbers.filter(n =>  n >= 0);
-const items = numbers
+const items = numbers1
 .filter(n =>  n >= 0)
 .map(n => ({value : n}))
 .filter(obj =>obj.value > 1)
 .map(obj => obj.value);
-
+console.log('Mapping Objects',items);
 //const items = filtered.map(n => ({value : n}));
    //return  {n : value2}; //delete the curly braces and place object in parenthesis
 //  return obj = {value3 : value2};//cleaner code above
  //return obj;
 //);
-console.log('Mapping Objects',items);
+
+//REDUCING AN ARRAY
+// const numbers2 = [1 , -1 , 2, 3];//we can reduce ll these numbers into a single value
+// this is like calculating sum of stuff in  cart
+
+//let sum = 0 ;
+
+//for(let t of numbers2)
+//sum += t;// sum = sum + n
+
+//console.log('Sum is', sum);
+//using the reduce method
+// const numbers2 = [1 , -1 , 2, 3];//we can reduce ll these numbers into a single value
+// const sum = numbers2.reduce((accumulator , currentvalue) => {
+//    return accumulator + currentvalue ;
+// });
+
+//Making the code simpler
+
+const numbers2 = [1 , -1 , 2, 3];//we can reduce ll these numbers into a single value
+const sum = numbers2.reduce((accumulator , currentValue) => accumulator + currentValue);
+console.log('Sum is', sum);

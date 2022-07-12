@@ -3,9 +3,7 @@ html{
 }
 
 body{
-     background: repeating-linear-gradient(transparent, transparent 6px, #c292f4 6px, #c292f4 9px, transparent 9px, transparent 12px, #c292f4 9px, #c292f4 24px, transparent 24px, transparent 27px, #c292f4 27px, #c292f4 30px, transparent 30px, transparent 48px), repeating-linear-gradient(90deg, transparent, transparent 6px, #c292f4 6px, #c292f4 9px, transparent 9px, transparent 12px, #c292f4 9px, #c292f4 24px, transparent 24px, transparent 27px, #c292f4 27px, #c292f4 30px, transparent 30px, transparent 48px), #22fb62;
-background-blend-mode: multiply;
-background-color: #22fb62;
+     display: block;
 }
 
 h1{
