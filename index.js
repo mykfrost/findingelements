@@ -113,118 +113,135 @@
 
 //iterating an array
 
-const numbers = [1,2,3];
-for (let number of numbers){
-   console.log(number);
-}
+// const numbers = [1,2,3];
+// for (let number of numbers){
+//    console.log(number);
+// }
 
-//Another way
+// //Another way
 
-numbers.forEach(function(number){
-   console.log('For Each',number);
-});
+// numbers.forEach(function(number){
+//    console.log('For Each',number);
+// });
 
-//Using Fat Arrow
+// //Using Fat Arrow
 
-numbers.forEach(number => console.log('Fat Arrow',number));
+// numbers.forEach(number => console.log('Fat Arrow',number));
 
-numbers.forEach((number,index) => console.log('Fat Arrow With Index',index,number));
+// numbers.forEach((number,index) => console.log('Fat Arrow With Index',index,number));
 
-//Joining Arrays
+// //Joining Arrays
 
-const numberz = [1,2,3];
+// const numberz = [1,2,3];
 
-const joined = numbers.join(',');
-console.log(joined);
+// const joined = numbers.join(',');
+// console.log(joined);
 
-//nother way to join messsages
+// //nother way to join messsages
 
-const message = 'This is my message';
+// const message = 'This is my message';
 
-const parts = message.split(' ');//splitting the array with ''
-console.log(parts);
+// const parts = message.split(' ');//splitting the array with ''
+// console.log(parts);
 
-parts.join('');
+// parts.join('');
 
-const combined3 = parts.join('-');
-console.log(combined3);// this is useful when building a URL slug
+// const combined3 = parts.join('-');
+// console.log(combined3);// this is useful when building a URL slug
 
-//Sorting Arrays
+// //Sorting Arrays
 
-const unsortedNumbers = [2 ,3,1];
+// const unsortedNumbers = [2 ,3,1];
 
-unsortedNumbers.sort();
-console.log('Sorted Solution',unsortedNumbers);
+// unsortedNumbers.sort();
+// console.log('Sorted Solution',unsortedNumbers);
 
-//reversing the order in an array
+// //reversing the order in an array
 
-unsortedNumbers.reverse(console.log('Reverse',unsortedNumbers));
-//Another example with object
+// unsortedNumbers.reverse(console.log('Reverse',unsortedNumbers));
+// //Another example with object
 
-const courses = [
-{id:1 , name : 'Node.js'},
-{id:2 , name: 'Javascript For Dummies'}
-];
+// const courses = [
+// {id:1 , name : 'Node.js'},
+// {id:2 , name: 'Javascript For Dummies'}
+// ];
 
-courses.sort(function(a,b){
-// a < b => -1
-// a > b => 1
-// a == b => 0
+// courses.sort(function(a,b){
+// // a < b => -1
+// // a > b => 1
+// // a == b => 0
 
-//to cheat the ascii table we hve to convert all values to upppercase
+// //to cheat the ascii table we hve to convert all values to upppercase
 
-nameA = a.name.toUpperCase();
-nameB = b.name.toUpperCase();
+// nameA = a.name.toUpperCase();
+// nameB = b.name.toUpperCase();
 
-if (nameA < nameB)return -1;
-if (nameA > nameB) return 1;
-return 0;
-});
+// if (nameA < nameB)return -1;
+// if (nameA > nameB) return 1;
+// return 0;
+// });
 
-console.log('JS Comes First',courses);
+// console.log('JS Comes First',courses);
 
-//testing Arrays
+// //testing Arrays
 
-//we want to test if the numbers in the array are positive
-//Every() method checks to see if every element in our array meets our condition
-const testNumbers = [1,2,3];
+// //we want to test if the numbers in the array are positive
+// //Every() method checks to see if every element in our array meets our condition
+// const testNumbers = [1,2,3];
 
-const allPositive = testNumbers.every(function(value ){
-   return value >= 0;
-});
+// const allPositive = testNumbers.every(function(value ){
+//    return value >= 0;
+// });
 
-console.log('All Positive',allPositive);
+// console.log('All Positive',allPositive);
 
-//using some method to see if atleast one is positive
-//Some() method checks to see if we have atleast one element in our array matches the condition/criteria
+// //using some method to see if atleast one is positive
+// //Some() method checks to see if we have atleast one element in our array matches the condition/criteria
 
-const testNumbers2 = [1,-1,2,3];
+// const testNumbers2 = [1,-1,2,3];
 
-const atleastOnePositive = testNumbers2.some(function(value ){
-   return value >= 0;
-});
+// const atleastOnePositive = testNumbers2.some(function(value ){
+//    return value >= 0;
+// });
 
-console.log('Atleast One Positive',atleastOnePositive);
+// console.log('Atleast One Positive',atleastOnePositive);
 
-//filtering an array based on a search criteria
+// //filtering an array based on a search criteria
 
-//we only want to return the positive numbers
+// //we only want to return the positive numbers
 
-const filterNumber = [1, -1, 2, 3, 4];
+// const filterNumber = [1, -1, 2, 3, 4];
 
-const filtered = filterNumber.filter(value =>  value >= 0);
+// const filtered = filterNumber.filter(value =>  value >= 0);
 
-console.log('Filtered',filtered);
+// console.log('Filtered',filtered);
 
-//mapping arrays into strings
-const filterNumber2 = [1, -1, 2, 3, 4];
+// //mapping arrays into strings
+// const filterNumber2 = [1, -1, 2, 3, 4];
 
-const filtered2 = filterNumber2.filter(value2 =>  value2 >= 0);
+// const filtered2 = filterNumber2.filter(value2 =>  value2 >= 0);
 
 
-const items = filtered2.map(value2 => '<li>' + value2 +'</li>' );
-//using join methods to join
+// const items = filtered2.map(value2 => '<li>' + value2 +'</li>' );
+// //using join methods to join
 
-const html = '<ul>'+ items.join('') + '</ul>';// we use these quotes to remove the comma that is used to separate the list of items in an array
+// const html = '<ul>'+ items.join('') + '</ul>';// we use these quotes to remove the comma that is used to separate the list of items in an array
 
-console.log('Second Filter For Mapping',html);
+// console.log('Second Filter For Mapping',html);
+
+// //Mapping arrays into objects
+
+const numbers = [1, -1, 2, 3, 4];
+//const filtered = numbers.filter(n =>  n >= 0);
+const items = numbers
+.filter(n =>  n >= 0)
+.map(n => ({value : n}))
+.filter(obj =>obj.value > 1)
+.map(obj => obj.value);
+
+//const items = filtered.map(n => ({value : n}));
+   //return  {n : value2}; //delete the curly braces and place object in parenthesis
+//  return obj = {value3 : value2};//cleaner code above
+ //return obj;
+//);
+console.log('Mapping Objects',items);
